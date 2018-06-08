@@ -21,10 +21,10 @@ public class ControladorVentanaPrincipal {
     private ControladorListadoClientes cListadoClientes;
     private ControladorAnadirCliente cAnadirCliente;
     private ControladorMostrarCliente cMostrarCliente;
-    /*private ControladorListadoVehiculos cListadoVehiculos;
+    private ControladorListadoVehiculos cListadoVehiculos;
     private ControladorAnadirVehiculo cAnadirVehiculo;
     private ControladorMostrarVehiculo cMostrarVehiculo;
-    private ControladorListadoAlquileres cListadoAlquileres;
+    /*private ControladorListadoAlquileres cListadoAlquileres;
     private ControladorAnadirAlquiler cAnadirAlquiler;
     private ControladorMostrarAlquiler cMostrarAlquiler;*/
     private Stage listadoClientes, anadirCliente, mostrarCliente, listadoVehiculos,
