@@ -45,12 +45,10 @@ public class IUTextual implements IVistaAlquilerVehiculos {
         } while (ordinalOpcion != Opcion.SALIR.ordinal());
     }
 
-    @Override
     public void salir() {
         System.out.println("FIN");
     }
 
-    @Override
     public void anadirCliente() {
         Consola.mostrarCabecera("Añadir cliente");
         try {
@@ -62,7 +60,6 @@ public class IUTextual implements IVistaAlquilerVehiculos {
         }
     }
 
-    @Override
     public void borrarCliente() {
         Consola.mostrarCabecera("Borrar cliente");
         String dni = Consola.leerDni();
@@ -74,7 +71,6 @@ public class IUTextual implements IVistaAlquilerVehiculos {
         }
     }
 
-    @Override
     public void buscarCliente() {
         Consola.mostrarCabecera("Buscar cliente");
         String dni = Consola.leerDni();
@@ -83,7 +79,6 @@ public class IUTextual implements IVistaAlquilerVehiculos {
         System.out.printf("%s%n%n", mensaje);
     }
 
-    @Override
     public void listarClientes() {
         Consola.mostrarCabecera("Listar clientes");
         for (Cliente cliente : controlador.obtenerClientes()) {
@@ -94,7 +89,6 @@ public class IUTextual implements IVistaAlquilerVehiculos {
         System.out.println("");
     }
 
-    @Override
     public void anadirVehiculo() {
         Consola.mostrarCabecera("Añadir Vehiculo");
         try {
@@ -107,7 +101,6 @@ public class IUTextual implements IVistaAlquilerVehiculos {
         }
     }
 
-    @Override
     public void borrarVehiculo() {
         Consola.mostrarCabecera("Borrar vehiculo");
         String matricula = Consola.leerMatricula();
@@ -119,7 +112,6 @@ public class IUTextual implements IVistaAlquilerVehiculos {
         }
     }
 
-    @Override
     public void buscarVehiculo() {
         Consola.mostrarCabecera("Buscar vehiculo");
         String matricula = Consola.leerMatricula();
@@ -128,7 +120,6 @@ public class IUTextual implements IVistaAlquilerVehiculos {
         System.out.printf("%s%n%n", mensaje);
     }
 
-    @Override
     public void listarVehiculo() {
         Consola.mostrarCabecera("Listar vehiculos");
         for (Vehiculo vehiculo : controlador.obtenerVehiculos()) {
@@ -139,7 +130,6 @@ public class IUTextual implements IVistaAlquilerVehiculos {
         System.out.println("");
     }
 
-    @Override
     public void abrirAlquiler() {
         Consola.mostrarCabecera("Abrir alquiler");
         String matricula = Consola.leerMatricula();
@@ -158,7 +148,6 @@ public class IUTextual implements IVistaAlquilerVehiculos {
         }
     }
 
-    @Override
     public void cerrarAlquiler() {
         Consola.mostrarCabecera("Cerrar trabajo");
         String matricula = Consola.leerMatricula();
@@ -177,7 +166,6 @@ public class IUTextual implements IVistaAlquilerVehiculos {
         }
     }
 
-    @Override
     public void listarAlquileres() {
         Consola.mostrarCabecera("Listar trabajos");
         for (Alquiler alquiler : controlador.obtenerAlquiler()) {
@@ -188,7 +176,6 @@ public class IUTextual implements IVistaAlquilerVehiculos {
         System.out.println("");
     }
     
-    @Override
     public void obtenerAlquileresAbiertos(){
         Consola.mostrarCabecera("Listado de alquileres abiertos");
         for (Alquiler alquiler : controlador.obtenerAlquiler()) {
@@ -197,7 +184,6 @@ public class IUTextual implements IVistaAlquilerVehiculos {
         }
     }
 
-    @Override
     public void obtenerAlquileresCliente(){
         String dni = Consola.leerDni();
         Consola.mostrarCabecera("Listado de alquileres para ese cliente");
@@ -207,7 +193,6 @@ public class IUTextual implements IVistaAlquilerVehiculos {
         }
     }
     
-    @Override
     public void obtenerAlquileresVehiculo(){
         
         String matricula = Consola.leerMatricula();

@@ -17,7 +17,7 @@ public interface IVistaAlquilerVehiculos {
 
     void comenzar();
 
-    void abrirAlquiler();
+    /*void abrirAlquiler();
 
     void anadirCliente();
 
@@ -45,5 +45,5 @@ public interface IVistaAlquilerVehiculos {
     
     void obtenerAlquileresVehiculo();
 
-    void salir();
+    void salir();*/
 }
