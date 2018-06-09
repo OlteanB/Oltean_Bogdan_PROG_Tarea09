@@ -3,41 +3,26 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package mvc.vista.iugraficaventanas.cotroladoresvistas;
+package mvc.vista.iugraficaventanas.controladoresvistas;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.control.ComboBox;
+import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import mvc.modelo.dominio.vehiculo.DatosTecnicosVehiculo;
-import mvc.modelo.dominio.vehiculo.TipoVehiculo;
+import javafx.stage.Stage;
 import mvc.modelo.dominio.vehiculo.Vehiculo;
+import mvc.vista.iugraficaventanas.IUGraficaVentanas;
+import mvc.vista.utilidades.Dialogos;
 
 /**
  *
  * @author bogdan
  */
-public class ControladorAnadirVehiculo {
-    @FXML
-    private TextField tfMatricula, tfMarca, tfModelo, tfCilindrada, tfNumeroPlazas, tfPma;
+public class ControladorMostrarVehiculo {
+    private Vehiculo vehiculo;
 
-    @FXML
-    private ComboBox<TipoVehiculo> cbTipo;
-
-    public Vehiculo getVehiculo() {
-        Vehiculo vehiculo = (cbTipo.getValue()).getInstancia(
-                tfMatricula.getText(), tfMarca.getText(), tfModelo.getText(),
-                new DatosTecnicosVehiculo(
-                        Integer.parseInt(tfCilindrada.getText()),
-                        Integer.parseInt(tfNumeroPlazas.getText()),
-                        Integer.parseInt(tfPma.getText())));
-        return vehiculo;
-    }
-
-    public void setVehiculo(Vehiculo vehiculo) {
+    public void rellenarVehiculo(Vehiculo vehiculo) {
         if (vehiculo != null) {
-            cbTipo.setValue(vehiculo.getTipoVehiculo());
+            tfTipo.setText(vehiculo.getTipoVehiculo().name());
             tfMatricula.setText(vehiculo.getMatricula());
             tfMarca.setText(vehiculo.getMarca());
             tfModelo.setText(vehiculo.getModelo());
@@ -45,7 +30,6 @@ public class ControladorAnadirVehiculo {
             tfNumeroPlazas.setText(Integer.toString(vehiculo.getDatosTecnicos().getNumeroPlazas()));
             tfPma.setText(Integer.toString(vehiculo.getDatosTecnicos().getPma()));
         } else {
-            cbTipo.setValue(TipoVehiculo.TURISMO);
             tfMatricula.setText("");
             tfMarca.setText("");
             tfModelo.setText("");
@@ -55,7 +39,24 @@ public class ControladorAnadirVehiculo {
         }
     }
 
+    public void setVehiculo(Vehiculo vehiculo) {
+        this.vehiculo = vehiculo;
+    }
+    @FXML
+    private TextField tfTipo, tfMatricula, tfMarca, tfModelo, tfCilindrada, tfNumeroPlazas, tfPma;
+
+    @FXML
+    private Button btBorrar, btCancelar;
+
+    @FXML
+    private void borrarVehiculo() {
+        IUGraficaVentanas.controladorMVC.borrarVehiculo(vehiculo.getMatricula());
+        Stage propietario = (Stage) btBorrar.getScene().getWindow();
+        Dialogos.mostrarDialogoInformacion("Borrar Vehículo", "Vehículo borrado satisfactoriamente", propietario);
+    }
+
     public void inhabilitaEdicionCampos() {
+        tfTipo.setEditable(false);
         tfMatricula.setEditable(false);
         tfMarca.setEditable(false);
         tfModelo.setEditable(false);
@@ -65,8 +66,7 @@ public class ControladorAnadirVehiculo {
     }
 
     @FXML
-    private void initialize() {
-        ObservableList<TipoVehiculo> tiposVehiculo = FXCollections.observableArrayList(TipoVehiculo.values());
-        cbTipo.setItems(tiposVehiculo);
+    private void cancelar() {
+        ((Stage) btCancelar.getScene().getWindow()).close();
     }
 }

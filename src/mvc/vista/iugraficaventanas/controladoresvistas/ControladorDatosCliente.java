@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package mvc.vista.iugraficaventanas.cotroladoresvistas;
+package mvc.vista.iugraficaventanas.controladoresvistas;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;

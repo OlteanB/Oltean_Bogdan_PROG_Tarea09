@@ -14,7 +14,7 @@ public class Dialogos {
 	
 	public static void mostrarDialogoError(String titulo, String contenido, Stage propietario) {
 		Alert dialogo = new Alert(AlertType.ERROR);
-		dialogo.getDialogPane().getStylesheets().add(Dialogos.class.getResource("../iugventanas.css").toExternalForm());
+		dialogo.getDialogPane().getStylesheets().add(Dialogos.class.getResource("/mvc/vista/iugraficaventanas/iugventanas.css").toExternalForm());
 		((Button) dialogo.getDialogPane().lookupButton(ButtonType.OK)).setId("btAceptar");
 		dialogo.setTitle(titulo);
 		dialogo.setHeaderText(null);
@@ -34,7 +34,7 @@ public class Dialogos {
 	
 	public static void mostrarDialogoInformacion(String titulo, String contenido, Stage propietario) {
 		Alert dialogo = new Alert(AlertType.INFORMATION);
-		dialogo.getDialogPane().getStylesheets().add(Dialogos.class.getResource("../iugventanas.css").toExternalForm());
+		dialogo.getDialogPane().getStylesheets().add(Dialogos.class.getResource("/mvc/vista/iugraficaventanas/iugventanas.css").toExternalForm());
 		((Button) dialogo.getDialogPane().lookupButton(ButtonType.OK)).setId("btAceptar");
 		dialogo.setTitle(titulo);
 		dialogo.setHeaderText(null);
@@ -54,7 +54,7 @@ public class Dialogos {
 	
 	public static void mostrarDialogoAdvertencia(String titulo, String contenido, Stage propietario) {
 		Alert dialogo = new Alert(AlertType.WARNING);
-		dialogo.getDialogPane().getStylesheets().add(Dialogos.class.getResource("../iugventanas.css").toExternalForm());
+		dialogo.getDialogPane().getStylesheets().add(Dialogos.class.getResource("/mvc/vista/iugraficaventanas/iugventanas.css").toExternalForm());
 		((Button) dialogo.getDialogPane().lookupButton(ButtonType.OK)).setId("btAceptar");
 		dialogo.setTitle(titulo);
 		dialogo.setHeaderText(null);
@@ -74,7 +74,7 @@ public class Dialogos {
 	
 	public static String mostrarDialogoTexto(String titulo, String contenido) {
 		TextInputDialog dialogo = new TextInputDialog();
-		dialogo.getDialogPane().getStylesheets().add(Dialogos.class.getResource("../iugventanas.css").toExternalForm());
+		dialogo.getDialogPane().getStylesheets().add(Dialogos.class.getResource("/mvc/vista/iugraficaventanas/iugventanas.css").toExternalForm());
 		((Button) dialogo.getDialogPane().lookupButton(ButtonType.OK)).setId("btAceptar");
 		((Button) dialogo.getDialogPane().lookupButton(ButtonType.CANCEL)).setId("btCancelar");
 		dialogo.setTitle(titulo);
@@ -87,7 +87,7 @@ public class Dialogos {
 	
 	public static boolean mostrarDialogoConfirmacion(String titulo, String contenido, Stage propietario) {
 		Alert dialogo = new Alert(AlertType.CONFIRMATION);
-		dialogo.getDialogPane().getStylesheets().add(Dialogos.class.getResource("../iugventanas.css").toExternalForm());
+		dialogo.getDialogPane().getStylesheets().add(Dialogos.class.getResource("/mvc/vista/iugraficaventanas/iugventanas.css").toExternalForm());//("../iugventanas.css").
 		((Button) dialogo.getDialogPane().lookupButton(ButtonType.OK)).setId("btAceptar");
 		((Button) dialogo.getDialogPane().lookupButton(ButtonType.CANCEL)).setId("btCancelar");
 		dialogo.setTitle(titulo);

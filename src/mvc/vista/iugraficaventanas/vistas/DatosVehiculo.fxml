@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.VBox?>
 
-<GridPane hgap="10.0" prefHeight="250.0" prefWidth="359.0" stylesheets="@../iugventanas.css" vgap="10.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tallermecanico.mvc.vista.iugraficaventanas.controladoresvista.ControladorDatosVehiculo">
+<GridPane hgap="10.0" prefHeight="250.0" prefWidth="359.0" stylesheets="@../iugventanas.css" vgap="10.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mvc.vista.iugraficaventanas.controladoresvistas.ControladorDatosVehiculo">
    <children>
       <Label text="Tipo Vehiculo:" GridPane.halignment="RIGHT" />
       <Label text="Matricula:" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />

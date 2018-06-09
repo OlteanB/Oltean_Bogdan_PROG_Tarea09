@@ -27,8 +27,7 @@ public class IUGraficaVentanas extends Application implements IVistaAlquilerVehi
     @Override
     public void start(Stage escenarioPrincipal) {
         try {
-            HBox raiz = (HBox) FXMLLoader.load(
-                    getClass().getResource("/mvc/vista/iugraficaventanas/vistas/VentanaPrincipal.fxml"));
+            HBox raiz = (HBox) FXMLLoader.load(getClass().getResource("/mvc/vista/iugraficaventanas/vistas/VentanaPrincipal.fxml"));
             Scene escena = new Scene(raiz);
             escenarioPrincipal.setOnCloseRequest(e -> confirmarSalida(escenarioPrincipal, e));
             escenarioPrincipal.setTitle("Alquiler de Vehiculos");
