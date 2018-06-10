@@ -32,6 +32,7 @@ public class ControladorAnadirCliente {
         Cliente cliente = null;
         try {
             cliente = datosCliente.getCliente();
+            System.out.println("prueba despues cliente");
             if (IUGraficaVentanas.controladorMVC.buscarCliente(cliente.getDNI()) == null) {
                 IUGraficaVentanas.controladorMVC.anadirCliente(cliente);
                 Stage propietario = ((Stage) btAnadir.getScene().getWindow());

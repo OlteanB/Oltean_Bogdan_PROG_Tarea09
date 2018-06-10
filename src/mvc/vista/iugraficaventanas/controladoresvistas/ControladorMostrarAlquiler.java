@@ -5,7 +5,7 @@
  */
 package mvc.vista.iugraficaventanas.controladoresvistas;
 
-import java.util.List;
+import java.util.LinkedList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -22,7 +22,7 @@ import mvc.vista.utilidades.Dialogos;
 public class ControladorMostrarAlquiler {
     private Cliente cliente;
     private Alquiler alquiler;
-    private List<Alquiler> alquileresCliente;
+    private LinkedList<Alquiler> alquileresCliente;
 
     @FXML
     private TextField tfDniCliente, tfMatricula, tfFecha, tfDias, tfPrecio, tfPrecioFijo;
@@ -47,7 +47,7 @@ public class ControladorMostrarAlquiler {
         actualizaAlquiler();
     }
 
-    public void setAlquileresCliente(List<Alquiler> alquileresCliente) {
+    public void setAlquileresCliente(LinkedList<Alquiler> alquileresCliente) {
         this.alquileresCliente = alquileresCliente;
         actualizaAlquiler();
     }
@@ -58,15 +58,15 @@ public class ControladorMostrarAlquiler {
             tfMatricula.setText(alquiler.getVehiculo().getMatricula());
             tfFecha.setText(alquiler.getFecha().toString());
             tfDias.setText("" + alquiler.getDias());
-            tfPrecio.setText("" + alquiler.getPrecio());
             tfPrecioFijo.setText("" + alquiler.getPrecioFijo());
+            tfPrecio.setText("" + alquiler.getPrecio());
         } else {
             tfDniCliente.setText("");
             tfMatricula.setText("");
             tfFecha.setText("");
             tfDias.setText("");
-            tfPrecio.setText("");
             tfPrecioFijo.setText("");
+            tfPrecio.setText("");
         }
     }
 

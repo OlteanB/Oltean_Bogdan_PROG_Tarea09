@@ -123,12 +123,12 @@ public class ControladorVentanaPrincipal {
 
     @FXML
     private void buscarAlquiler() {
-        String dni = Dialogos.mostrarDialogoTexto("Buscar alquiler", "Introduce el DNI del cliente del alquiler a buscar");
-        //String matricula = Dialogos.mostrarDialogoTexto("Buscar alquiler", "Introduce la matrícula del vehículo del alquiler a buscar");
-        if (dni != null /*|| matricula != null*/) {
-            LinkedList<Alquiler> alquileresCliente = IUGraficaVentanas.controladorMVC.obtenerAlquileresCliente(dni);
-            //Vehiculo vehiculo = IUGraficaVentanas.controladorMVC.buscarVehiculo(matricula);
-            Cliente cliente = IUGraficaVentanas.controladorMVC.buscarCliente(dni);
+        //String dni = Dialogos.mostrarDialogoTexto("Buscar alquiler", "Introduce el DNI del cliente del alquiler a buscar");
+        String matricula = Dialogos.mostrarDialogoTexto("Buscar alquiler", "Introduce la matrícula del vehículo del alquiler a buscar");
+        if (/*dni != null ||*/ matricula != null) {
+            LinkedList<Alquiler> alquileresCliente = IUGraficaVentanas.controladorMVC.obtenerAlquileresVehiculo(matricula);
+            Vehiculo vehiculo = IUGraficaVentanas.controladorMVC.buscarVehiculo(matricula);
+            //Cliente cliente = IUGraficaVentanas.controladorMVC.buscarCliente(dni);
             if (alquileresCliente != null /*|| cliente != null*/) {
                 //Alquiler alquiler = IUGraficaVentanas.controladorMVC.
                 cMostrarAlquiler.setAlquileresCliente(alquileresCliente);

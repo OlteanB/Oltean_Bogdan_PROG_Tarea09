@@ -20,7 +20,7 @@ public class ControladorDatosCliente {
     private TextField tfNombre, tfDni, tfCalle, tfLocalidad, tfCodigoPostal;
 
     public Cliente getCliente() {
-        DireccionPostal direccion = new DireccionPostal(tfCalle.getText(), tfLocalidad.getText(), tfCodigoPostal.getText());
+        DireccionPostal direccion = new DireccionPostal(tfCodigoPostal.getText(), tfCalle.getText(), tfLocalidad.getText());
         return new Cliente(tfNombre.getText(), tfDni.getText(), direccion);
     }
 
